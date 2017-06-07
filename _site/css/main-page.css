@@ -1,0 +1,8 @@
+body, .container {
+    background: #fafafa;
+}
+
+.jumbotron{
+	background: #fafafa;
+	padding-bottom: 1rem;
+}
