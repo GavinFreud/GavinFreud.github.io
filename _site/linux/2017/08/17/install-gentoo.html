@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Install Gentoo</title>
+  <meta name="description" content="Introduction: A Piece of Magic Mix">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/linux/2017/08/17/install-gentoo.html">
+  <link rel="alternate" type="application/rss+xml" title="Sriram Iyer" href="/feed.xml">
+  
+  
+</head>
+
+
+  <body>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Sriram</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="/index.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="/projects.html">Projects</a></li>
+                    <li><a href="/aboutMe.html">About Me</a></li>
+                    <li class="active"><a href="/blog/">Blog</a></li>
+                    <li><a href=#>Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Install Gentoo</h1>
+    <p class="post-meta">
+      <time datetime="2017-08-17T20:00:00-04:00" itemprop="datePublished">
+        
+        Aug 17, 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h3 id="introduction-a-piece-of-magic-mix"><strong>Introduction: A Piece of Magic Mix</strong></h3>
+
+<p>It’s 3 AM. You’ve been sitting at your desk for hours, trying to find the solution to challenging, yet easily googleable technological problem. You look to your window, hoping to take in the nice scenery of the clear, dark night to clear your head as you tackle your dilemma, only to remember that you boarded it up in order to prevent the glares of sunlight from ruining your view of your monitor.</p>
+
+<p>You’ve had enough. You decide to visit your fellow tech enthusiasts on 4chan’s /g/ board, hoping that anyone there will be able to give you the solution that you have been incessantly searching for. After you posted a new thread highlighting your problem, you lie in wait. Soon enough, you get a response along the lines of:</p>
+
+<p><img src="/assets/install_gentoo_screenshot_1.png" alt="Install Gentoo" /></p>
+
+<p>You scratch your head. Gentoo? What’s that? As soon as you press enter after typing “what is gentoo” into Google, the first thing you see is that it’s a type of penguin due to Google’s dictionary entry being the first result. After leaving an unnecessarily hostile reply to the poster that referred you to Gentoo, you navigate back to the google search and notice that there is also a Linux distribution under the same name.</p>
+
+<p>On the basis that you’ve successfully installed Ubuntu on your 6 year old cousin’s laptop, you decide to install Gentoo without looking at the guide. You then boot up your computer with your newly made Gentoo boot stick, wipe all your drives, and begin your descent down the dark rabbit hole that is the Gentoo installation.</p>
+
+<p>Just to be clear, this post isn’t going to be a guide on how to install Gentoo. That’s what <a href="https://wiki.gentoo.org/wiki/Handbook:AMD64">the guide</a> is for. Something else that this post will not cover is the meme “install gentoo” itself. The people over at <a href="http://knowyourmeme.com/memes/install-gentoo">knowyourmeme</a> describe the history and humor much more eloquently than I ever could. What this post is going to be, however, is the experience of installing Gentoo from the viewpoint of someone who, despite having very little experience with Linux in general (a few months each with Ubuntu and Arch Linux), wanted to truly try to “install gentoo” and hopefully become more knowledgeable about Linux in the process.</p>
+
+<h3 id="part-1-creating-the-usb"><strong>Part 1: Creating the USB</strong></h3>
+
+<p>Normally, this part is self-explanatory. Simply procure the proper version, and create a bootstick with Rufus if on Windows, Etcher on Mac, etc. Gentoo is by no means any different. However, I can’t really say that I’ve given you my full experience of attempting to install gentoo if I didn’t mention how <em>I somehow managed to mess this up horribly.</em></p>
+
+<p>Look at this screenshot of the Gentoo downloads page:</p>
+
+<p><img src="/assets/install_gentoo_screenshot_2.png" alt="Gentoo Downloads" /></p>
+
+<p>You probably noticed separate downloads for two separate architectures: amd64 and x86. Something else that you’ve probably noticed is that right next to the emphasized “amd64” heading, is that there is also a faded label that says “aka x86-64.” This is something that I either did not see, or something that I just plain ignored, and downloaded the x86 image when I wasn’t installing gentoo on a computer with an x86 architecture CPU. A few hours later, my first attempt at installation failed, and it took a call to my linux-enthusiast college roommate (and good friend) to figure out where exactly I went wrong. When I finally understood what happened, I rage-quit for the night and cried myself to sleep. Fortunately though, that was the last and only time that I failed to install Gentoo. That said, if there was one thing that you should take away from this post, I would say that it would be that <em>if you are installing gentoo, for the love of Richard Stallman make sure that the image you are downloading is for the <strong>correct</strong> architecture.</em></p>
+
+<h3 id="part-2-not-too-badat-first"><strong>Part 2: Not too bad…at first</strong></h3>
+
+<p>Before I continue, I should probably mention the kind of hardware that I’m using for this little exploratory study. Originally, I was using an <a href="https://www.asus.com/Laptops/U31SD/">ASUS U31SD</a>, which I did manage to successfully install Gentoo onto, but I switched to a <a href="https://www.cnet.com/products/thinkpad-x60/specs/">Thinkpad X60</a> shortly after because I didn’t feel like I recorded enough of my experience to adequately write this post, and since I had an X60 lying around at college to use. Hopefully things won’t be confusing now when I mention that I followed this <a href="https://wiki.gentoo.org/wiki/Handbook:X86/Full/Installation">guide</a> almost to the letter, since the Thinkpad <em>actually has an x86 processor.</em></p>
+
+<p>Once I made sure that I possessed the <strong>correct</strong> image, I proceeded to boot up into the gentoo installation environment. Thanks to my experience with Arch Linux, I was already somewhat acquainted with the terminal interface. Immediately after being thrown into the terminal, I already began to stray off of the installation guide and proceed to partition my disk. This was surprisingly simple, thanks to the fact that you need to do this in Arch as well, and also because the documentation is <em>very</em> well written.</p>
+
+<p>After partitioning my drive, I installed ext4 on /dev/sda2 and /dev/sda4, activated the swap partition, and mounted the root partition. I then realized that I completely skipped the network configuration section of the guide.</p>
+
+<p>This part wasn’t challenging for every attempt aside from the first. The reason for this is that I naively decided to avoid using ethernet simply because my router was in a closet, and I thought it would be troublesome to sneak an ethernet cable underneath the door.</p>
+
+<p>This may be my 20/20 hindsight speaking here, but this is probably the most foolish thought that crept into my mind throughout the entirety of this install, and keep in mind that I <em>downloaded the wrong image because I couldn’t read a downloads page properly.</em> To put into context how amazing ethernet can be, let me just say that every time I used the wire, it authenticated within seconds and I had a working internet connection, just with the plug of a wire (granted things would get slightly more complicated if authentication failed). With my bright (not really) wireless idea however, not only would I have to input several commands to get it working, but since my wireless network was set up with WPA, I would’ve had to use a separate package called wpa_supplicant to get it working! What makes this all the more entertaining lies within the irony that in order to even <em>download</em> wpa_supplicant, I would’ve had to input the following command:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">root <span class="c"># emerge --ask net-wireless/wpa_supplicant</span></code></pre></figure>
+
+<p>I can’t even execute that without a working connection unless I had the source package!</p>
+
+<p>Needless to say, I got over my laziness in a heartbeat after stumbling upon that realization, and just wired the ethernet cable.</p>
+
+<h3 id="part-3-failing-to-install-the-stage-tarball"><strong>Part 3: Failing to Install the Stage Tarball</strong></h3>
+
+<p>Similarly to creating a boot stick, this shouldn’t be difficult. you simply boot up a browser (command line browsers are my favorite), navigate towards the autobuilds directory for your CPU Architecture, and download the tarball. For me, this went wrong in two places. First off, this is where I ended up finding out that I was using the wrong image all along, so I kept installing the wrong stage tarball. The second is just as foolish. Once you navigate towards the autobuilds directory for your architecture, you may see something like this (quick note here, most pictures I have of my gentoo installation look absolutely horrible since I shot from my phone, so most of these pictures are screenshots taken with my Macbook):</p>
+
+<p><img src="/assets/install_gentoo_screenshot_3.png" alt="Autobuilds for i686" /></p>
+
+<p>Once you navigate into one of those folders with the date as their name, you would most likely see something like this:</p>
+
+<p><img src="/assets/install_gentoo_screenshot_4.png" alt="Autobuilds directory" /></p>
+
+<p>Here is where the stupidity ensued, as for 20 minutes I kept downloading the <em>folder that contained the tarball</em> rather than <em>the tarball itself.</em> My aforementioned roommate was the one who finally corrected me, and then proceed to point out that I downloaded the wrong image. It is at this point that <em>I seriously cannot stress how bad my first installation attempt was.</em></p>
+
+<p>Thankfully, my later attempts did not provide me with nearly as much trouble. That being said, what followed wasn’t exactly stressful, yet not exactly desirable either.</p>
+
+<h3 id="part-4-waiting"><strong>Part 4: Waiting</strong></h3>
+
+<p>During my second attempt, I finally reached the tarball stage (which took only around 30 minutes now that I was acquainted with the gentoo installation environment). As I hit the download button on the tarball, I heaved a huge sigh of relief at the sight of the tarball <em>actually downloading.</em> This, however, was followed by seven minutes of staring at the screen, waiting for it to finish. After it finished, I quickly typed the install command, and proceeded to wait for another seven minutes.</p>
+
+<p>After that was done, I easily went through configuring the compile options, selecting mirrors, mounting necessary filesystems, configuring portage, etc. I then selected a default desktop profile with the intention of installing a desktop environment (such as xfce) in mind, and then I proceeded to update the world set.</p>
+
+<p>I’m going to say at this point that I had absolutely <em>no idea</em> beforehand how much waiting I would end up doing before this was completed.</p>
+
+<p>In the process of updating the world set, Gentoo had to download <em>178</em> packages. 178! During my second installation attempt, I was able to watch <a href="https://en.wikipedia.org/wiki/The_Room_(film)">The Room</a>(great film by the way) twice before hitting even <em>89.</em> When I started the update, it was around 1:15 AM. I stayed up until 4:30, which was when I collapsed. When I woke up at around 11, I saw that there was still <em>40 packages left.</em> The icing on the cake, however, was easily when I saw that after the update had finished, <em>only profiles selected with systemd were required to do this.</em> To my pleasant surprise, this process took a little less time when I tried it the third time, however that is probably thanks to Pitt’s decent ethernet. After configuring the locales, I arrive at something even many of the Linux elites believe to be one of the more advanced procedures that a Linux user could perform.</p>
+
+<h3 id="part-5-kernel-configuration"><strong>Part 5: Kernel Configuration</strong></h3>
+
+<p>Okay, this wasn’t nearly as hard for me to figure out as some of the other parts of the installation. The main reason for this wasn’t because of my skills with kernel configuration (which are nonexistent) or my knowledge of the hardware I was using (which can be considered average at best), but once again due to the easy-to-follow, well written guide that the Gentoo wiki provides. My apologies for the anticlimactic result, but in exchange let me tell you something useful. If you’re not sure what an option in the Kernel Configuration Menu does, you can press H, which will bring up the info page for it (once again, something I got from my roommate).</p>
+
+<p>Everything afterwards essentially led to final tweaks to prepare the environment. This included setting the root password, setting up a system logger, installing a boot loader, etc. Once all this was done, I restarted my computer, and I beheld the sight of the completed installation.</p>
+
+<h3 id="conclusion"><strong>Conclusion</strong></h3>
+
+<p>As you can probably tell, the installation worked. I was able to log in as root, and set up another user as well as install xfce. I am now a proud member of the group that was successfully able to “install gentoo!”</p>
+
+<p>If I am speaking honestly, I don’t really think it was as difficult as many would believe it to be, if not due to the well-written guide. While I may be more technically savvy when compared to many others, my lack of experience with more advanced Linux distributions makes me a bit relatable to the masses who want to at least try to install the distribution, but are intimidated by the process, the use of a terminal, or anything else that could be perceived scary about an advanced distribution. What I’m trying to say is that if I can do it, many other people could.</p>
+
+<p>That being said, it was by no means easy. Although most of my problems were caused by either my lack of attention to detail or because of blatant stupidity on my part, I don’t think that many inexperienced users could get by without hitting a snag at some point in the process. Installing Gentoo is something that requires time, patience, and a bit of computer know-how. It also isn’t something that I would recommend doing on a whim, as it’s can be quite annoying to have to back up all your files just to install a random Operating System on an old computer, only to reinstall Windows immediately after.</p>
+
+<p>With that in mind, I’m not planning on this being the last time that I talk about Gentoo. I want to use it for a few weeks, and see how quickly I can get used to it. I want to see if I can conveniently surf the internet, write a few programs, and maybe even play some games on it. Check back in a few weeks to see the results, and thanks for reading!</p>
+
+
+  </div>
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Sriram Iyer</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Sriram Iyer
+            
+            </li>
+            
+            <li><a href="mailto:ramiyer1998@gmail.com">ramiyer1998@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/GavinFreud"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">GavinFreud</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/GavinFreud"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">GavinFreud</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Computer Scientist and Mathematician. I&#39;ll write about stuff that I find interesting or things that I want to talk about.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
