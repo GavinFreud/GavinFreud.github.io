@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Install Gentoo"
-date:   2017-08-18 00:00:00 
+date:   2017-08-28 00:00:00 
 categories: Linux
 ---
 
