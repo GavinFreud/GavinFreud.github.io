@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Significance of Hello World"
-date:   2017-09-02 00:00:00 
+date:   2017-09-04 00:00:00 
 categories: Programming
 comments: true
 ---
