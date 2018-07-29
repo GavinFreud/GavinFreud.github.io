@@ -42,6 +42,8 @@ $on-laptop:        800px !default;
   font-size: $base-font-size * $ratio;
 }
 
+$table-text-align: left !default; 
+
 // Import partials.
 @import
   "minima/base",
