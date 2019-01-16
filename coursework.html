@@ -18,13 +18,11 @@
   
   </head>
 
-<!---
-  <style>
-    .jumbotron {
-      background-color:#F5F5F5 !important
+  <style type="text/css">
+    #limit {
+        max-width: 225px;
     }
-  </style>
--->
+    </style>
   <body>
     <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container-fluid">
@@ -38,10 +36,10 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="aboutMe.html">About Me</a></li>
-                    <li><a href="coursework.html">Coursework</a></li>
+                    <li class="active"><a href="coursework.html">Coursework</a></li>
                     <li><a href="blog/">Blog</a></li>
                     <li><a href="assets/resume.pdf">Resume</a></li>
                 </ul>
@@ -53,16 +51,18 @@
   <main>
 
 
-    <div class = "jumbotron text-center">
-      <div class="container">
-        <h2>Sriram Iyer</h2>
-        <h4> University of Pittsburgh Class of 2020</h4>
-      </div>
-    </div>
 
+        <div class="container text-center">
+                <h2>Coursework</h2>
+                <h4>Courses that I'm either enrolled in now, or have taken in the past</h4>
+              </div>
 
-    <div class="container text-center">
-      <p>Computer Science and Mathematics Major at the University of Pittsburgh. I'm highly interested in Virtual Reality and Data Science, and hope to one day work on content in full-dive VR. I enjoy reading and writing stories, playing video games, and watching anime.</p>
+              <br>
+    <div class="container center" align="center">
+        <ul id="limit">
+            <li><a href="courses/pdc/pdc.html">Projects in Digital Composition</a></li>
+        </ul>
+     
     </div>
 
 
