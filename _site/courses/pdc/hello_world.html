@@ -1,18 +1,27 @@
 <!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
 <body>
     <h1>Objectively Awesome: Fork Bombs</h1>
     <h4>Hey Ram, what the fork is a Fork Bomb?</h4>
-    
-    <p>Excellent question. Let me ask you another one. Are you familiar with Australia's Cane Toad Infestation? If not, 
-        here's a quick refresher. In the 1930's, Australia introduced a family of Cane Toads to the island in order to 
-        control the rampantly growing grey-backed Cane beetle population. The toads did NOT do this, and instead became 
+
+    <p>Excellent question. Let me ask you another one. Are you familiar with Australia's Cane Toad Infestation? If not,
+        here's a quick refresher. In the 1930's, Australia introduced a family of Cane Toads to the island in order to
+        control the rampantly growing grey-backed Cane beetle population. The toads did NOT do this, and instead became
         their own menace to Australia. Australians still have to deal with Cane toads to this day.
 
         <br>
         <br>
-        You are probably wondering, "Ram, what does this have to do with Fork Bombs?" Well, kind of everything. To bit it
-        simply, Fork Bombs are exactly like what happened in Australia, except they're happening in your machines with CPU
-        processes rather than toads (I can't even <em>imagine</em> what it would be like to have <strong>TOADS</strong> in your computer).
+        You are probably wondering, "Ram, what does this have to do with Fork Bombs?" Well, kind of everything. To bit
+        it
+        simply, Fork Bombs are exactly like what happened in Australia, except they're happening in your machines with
+        CPU
+        processes rather than toads (I can't even <em>imagine</em> what it would be like to have <strong>TOADS</strong>
+        in your computer).
     </p>
     <br>
     <div class="content">To see an example of a fork bomb, look at this UNIX shell input:
@@ -20,36 +29,94 @@
         <br>
     </div>
     <code>:(){ :|:& };:</code>
-        <br>
-        <br>
+    <br>
+    <br>
     <p>A quick explanation of what's happening here: </p>
     <ul>
         <li>First, an explanation of each snippet of that command: </li>
         <ul>
             <li><code>:()</code> - This statement is defining some random function where our code will live </li>
-            <li><code>{</code> - Begins the function, everything within this and its sister bracket will determine what happens</li>
+            <li><code>{</code> - Begins the function, everything within this and its sister bracket will determine what
+                happens</li>
             <li><code>:</code> - Loads a copy of the function that we are currently defining into memory </li>
-            <li><code>|</code> - This signifies that the output of the function copy we loaded in previously is being piped
+            <li><code>|</code> - This signifies that the output of the function copy we loaded in previously is being
+                piped
                 to...</li>
             <li><code>:</code> - ...Another copy of the function that we're defining</li>
-            <li><code>&</code> - This signifies that the statements that were declared to the immediate left of it should still
+            <li><code>&</code> - This signifies that the statements that were declared to the immediate left of it
+                should still
                 be run in the background even after this command has been terminated</li>
             <li><code>}</code> - This ends the function that we just defined</li>
             <li><code>;</code> - This ends our declaration of the function</li>
-            <li><code>:</code> - Us calling the function we just defined. This begins the chaos that we have been orchestrating
+            <li><code>:</code> - Us calling the function we just defined. This begins the chaos that we have been
+                orchestrating
                 before this.</li>
         </ul>
-        <li>Whenever you type that command into your UNIX shell, you are starting a chain reaction of endless, worthless functions that exist only to generate two more like it.</li>
-        <li>This leads to these processes crowding your CPU with so many meaningless tasks that it will begin to hinder its ability to do actual work that you need it to do.</li>
-        <li>Only way to fix this is to reboot your computer. Not bad, but could be deadly if you need to save a ton of files. Long story short, try not to fall for this :).</li>
+        <li>Whenever you type that command into your UNIX shell, you are starting a chain reaction of endless,
+            worthless functions that exist only to generate two more like it.</li>
+        <li>This leads to these processes crowding your CPU with so many meaningless tasks that it will begin to hinder
+            its ability to do actual work that you need it to do.</li>
+        <li>Only way to fix this is to reboot your computer. Not bad, but could be deadly if you need to save a ton of
+            files. Long story short, try not to fall for this :).</li>
     </ul>
 
-    <a href="http://malware.wikia.com/wiki/Fork_Bomb" target="_blank">To learn more, click here (not a fork bomb, I promise).</a>
+    <a href="http://malware.wikia.com/wiki/Fork_Bomb" target="_blank">To learn more, click here (not a fork bomb, I
+        promise).</a>
 
     <br>
     <br>
     <p>Welcome to the world of malware!</p>
-    
+    <br>
+    <div id="most_important">Some important text</div>
+    <div class="caption">Some caption text</div>
+    <div class="alert alert-primary" role="alert">
+        A simple primary alert—check it out!
+    </div>
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+
+
+        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple primary list group
+            item</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">A simple secondary list
+            group item</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-success">A simple success list group
+            item</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-danger">A simple danger list group
+            item</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-warning">A simple warning list group
+            item</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-info">A simple info list group item</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-light">A simple light list group item</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-dark">A simple dark list group item</a>
+    </div>
+    <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false"
+            aria-controls="multiCollapseExample1">Toggle first element</a>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2"
+            aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse"
+            aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+    </p>
+    <div class="row">
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                </div>
+            </div>
+        </div>
+    </div>
+
     <img src="https://cdn-images-1.medium.com/max/2000/1*ve6zpKTPG7WgJ-fvqou9sA.jpeg">
 
 
@@ -59,8 +126,14 @@
         <ul>
             <li><a href="https://google.com">Link to Google</a></li>
             <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/440px-SNice.svg.png"></li>
-            <li><div><p>This is a paragraph.</p></div></li>
-            <li><h4 class="sidebar">My sidebar heading</h4></li>
+            <li>
+                <div>
+                    <p>This is a paragraph.</p>
+                </div>
+            </li>
+            <li>
+                <h4 class="sidebar">My sidebar heading</h4>
+            </li>
 
         </ul>
     </div>
