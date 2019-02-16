@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+    <title>Stuff</title>
+</head>
+<body>
+    <div id="first_div">
+        <button onclick = "playSound()">Begin</button>
+    </div>
+
+    
+</body>
+<script type="text/javascript" src="howler.js/dist/howler.min.js">Howler.js</script>
+<script>
+
+    function playSound() {
+        var sound = new Howl({
+            src: ['sounds/faure.mp3'],
+            loop: true
+        });
+        console.log(sound)
+        sound.play();
+
+        var div = document.getElementById("first_div");
+        div.innerHTML = "";
+
+        var paragraph = document.createElement("p");
+        var text = document.createTextNode("You find yourself in the middle of a forest. You hear a symphony of chirps produced by song thrushes, the wind is blowing pleasant cool air, and you are surrounded by a myriad of beautiful trees. ");
+        paragraph.appendChild(text);
+        div.appendChild(paragraph);
+
+        var brk = document.createElement("br");
+        div.appendChild(brk);
+
+        var paragraph = document.createElement("p");
+        var text = document.createTextNode("As you wander around 'the Wonderland,' as you've dubbed it, three particular trees catch your interests.");
+        paragraph.appendChild(text);
+        div.appendChild(paragraph);
+
+        var brk = document.createElement("br");
+        div.appendChild(brk);
+
+        var paragraph = document.createElement("p");
+        var text = document.createTextNode("Which tree do you approach first?");
+        paragraph.appendChild(text);
+        div.appendChild(paragraph);
+
+        var brk = document.createElement("br");
+        div.appendChild(brk);
+
+        var button1 = new Image(100,200);
+        button1.src = "img/ginkgo.jpg";
+        button1.setAttribute("id", "Ginkgo");
+        button1.onclick=function(){
+            button1.onclick= function(){return; };
+            button2.onclick = function(){return;};
+            button3.onclick = function(){return;};
+            ginkgo();
+        };
+        div.appendChild(button1);
+        
+        var button2 = new Image(100,200);
+        button2.src = "img/sakura.jpg";
+        button2.setAttribute("id", "Sakura");
+        button2.onclick=function(){
+            button1.onclick= function(){return; };
+            button2.onclick= function(){return; };
+            button3.onclick = function(){return;};
+            sakura();
+        };
+        div.appendChild(button2);
+
+        var button3 = new Image(100,200);
+        button3.src = "img/maple.jpg";
+        button3.setAttribute("id", "Maple");
+
+        button3.onclick=function(){
+            button1.onclick= function(){return; };
+            button2.onclick= function(){return; };
+            button3.onclick = function(){return;};
+            maple();
+        };
+        div.appendChild(button3);
+    }
+
+    function maple(){
+        var div = document.getElementById("first_div");
+        var paragraph = document.createElement("p");
+        var text = document.createTextNode("You walk up to the maple tree and observe it's beauty. Then you realize you can harvest it for maple syrup. You made a fortune. The end!");
+        paragraph.appendChild(text);
+        div.appendChild(paragraph);
+        
+        var button1 = document.createElement("button");
+        button1.innerHTML="Read again!";
+        button1.onclick = function(){
+            playSound();
+        }
+        div.appendChild(button1);
+    }
+
+    function ginkgo(){
+        var div = document.getElementById("first_div");
+        var paragraph = document.createElement("p");
+        var text = document.createTextNode("You walk up to the ginkgo tree, but then are hit with a pungent odor. You realize you can make smoke bombs using the tree's fruit, and decide to capitalize on the idea. You sell your prototype to the military and they buy it from you. You're swimming in dough. The end!");
+        paragraph.appendChild(text);
+        div.appendChild(paragraph);
+
+        var button1 = document.createElement("button");
+        button1.innerHTML="Read again!";
+        button1.onclick = function(){
+            playSound();
+        }
+        div.appendChild(button1);
+    }
+
+    function sakura(){
+        var div = document.getElementById("first_div");
+        var paragraph = document.createElement("p");
+        var text = document.createTextNode("You walk up to the Cherry Blossom tree. You settle down, and sit at the base. At this point, you've found serenity and don't want to lose it. You close your eyes, and sit there. They never open again. The end.");
+        paragraph.appendChild(text);
+        div.appendChild(paragraph);
+
+        var button1 = document.createElement("button");
+        button1.innerHTML="Read again!";
+        button1.onclick = function(){
+            playSound();
+        }
+        div.appendChild(button1);
+    }
+
+</script>
+
