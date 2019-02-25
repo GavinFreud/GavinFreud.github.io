@@ -17,3 +17,11 @@ body {
 p {
     display: inline
 }
+
+.choice:hover {
+  color: lightcoral
+}
+
+.chosen {
+  color: lightcoral
+}

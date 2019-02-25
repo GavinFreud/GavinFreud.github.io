@@ -1,4 +1,3 @@
-
 function playSound(){
     
     var div = document.getElementById("first_div");

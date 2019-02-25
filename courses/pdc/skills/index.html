@@ -15,6 +15,9 @@
     <li><a href="../hello_world/">Homework</a></li>
     <li><a href="../dataset/">Dataset Project</a></li>
     <li><a href="../skills/">Skills</a></li>
+    <li><a href="practice/">Practice 1</a></li>
+    <li><a href="practice2/">Practice 2</a></li>
+    <li><a href="final_project/">Final Project</a></li>
   </ul>
 
   <div class="container">
@@ -63,25 +66,54 @@
             <td>02/15/19: Friday 10:00 AM</td>
             <td>02/15/19: Friday 12:20 PM</td>
             <td>Write some drafts using streamwriting</td>
-            <td>I spent an hour and 15 minutes using Leonardo Da Vinci's streamwriting technique to write 4 full-page
+            <td>I spent an hour and 15 minutes using Leonardo Da Vinci's streamwriting technique to write and edit 4 full-page
               drafts and 1 half-page draft. This was surprisingly useful, as even though most of my ideas across drafts
               weren't particularly coherent, they still had some reasonably interesting ideas. I saved them and decided
-              to try to make the shorter half-page draft into a small interactive piece. I wanted to get it done within
-              an hour, and was able to do it within around 45 minutes. That can be found <a href="practice/">here.</a>
+              to try to make the shorter half-page draft into a small interactive piece (greatly cut down due to JS troubles). 
+              I wanted to get it done within an hour, and was able to do it within around 45 minutes. That can be found 
+              <a href="practice/">here.</a>
             </td>
           </tr>
           <tr>
               <td>02/18/19: Monday 7:00 PM</td>
-              <td>02/15/19: Friday 10:30 PM</td>
-              <td>Started final project, learned Typed.js and worked with CSS</td>
+              <td>02/18/19: Monday 10:30 PM</td>
+              <td>Started final project, started learning Typed.js and worked with CSS</td>
               <td>I started working on my final Pages Content. I decided to change gears for the final project and 
-                instead wanted to work towards an interactive terminal (essentially a digital version of Tom Riddle's 
+                instead wanted to work towards a story where you work with an interactive 'terminal' (essentially a digital version of Tom Riddle's 
                 Diary from the second Harry Potter novel). It took me some time to get used to Typed.js' documentation, and 
                 trying to incorporate Howler.js along with it took some time. I figured it out, and also started working on CSS
                 to set the background something like a terminal and changed some of the text as well. This was a decent start to my project.
-                That can be found <a href="project/">here.</a>
+                That can be found <a href="practice2/">here.</a>
               </td>
             </tr>
+          <tr>
+            <td>2/19/19: Tuesday 5:00 PM</td>
+            <td>2/19/19: Tuesday 8:00 PM</td>
+            <td>Whole lots of Javascript, some tweaks to the writing</td>
+            <td>Today I started trying to work on the small project that I had before. I wanted to include some choice and consequence, so I decided
+              to have Javascript generate ul's with li's that would serve as the options. This was my original goal, and it did eventually become a reality,
+              but the first part of my session for today was spent trying to handle a few annoyances with Typed.js. One particular issue is that Typed.js is 
+              handled primarily by callbacks. Callbacks weren't something that I really had much experience with in Javascript, so it took a little bit of time 
+              to figure out how they really worked. While I saw and tested many solutions online that handled this, particularly setting timeouts and nesting callback
+              functions together, I realized that since Typed.js has an "onComplete" attribute which allows me to run a function once the animation has completed,
+              I could just have it generate the next part of the story that way. I spent a decent amount of time trying to handle callbacks, and the rest of my practice 
+              was dedicated to fleshing out different paths that the user could go down interacting with Walden. Unfortunately, due to my various difficulties I couldn't have
+              several winding paths like I expected, and instead ended up plotting a a few smaller paths. 
+            </td>
+          </tr>
+          <tr>
+            <td>2/21/19: Thursday 4:45 PM</td>
+            <td>2/21/19: Thursday 7:15 PM</td>
+            <td>Asking Webapps Professor for help on gradients, finishing story</td>
+            <td>For one part of my project, I wanted to be able to change the background from one gradient to a much whackier gradient. Since I got
+              the first gradient from the internet, I wasn't really sure how they worked, and I couldn't figure out how to get Javascript to change the background
+              of the body to that of a different gradient. Because of this, I decided to go to my Web Development professor's office hours. That being said, I got really nervous
+              because I wasn't used to asking for help, and he ended up noticing me outside and invited me in. It turns out that while my intuition of how to declare a gradient was 
+              correct, I wasn't actually changing the body background correctly. From there, I spoke to some other friends well-versed in web development on trying to handle my callbacks
+              more efficiently, and a few other questions on CSS that I didn't quite understand. Something that my friends managed to help me out with is that whenever Typed.js finished animating typing
+              a line, the cursor would remain and blink. I ended up having to select the span and removing some CSS classes from it. I then finished up some work on my project. It's small but you can find it <a href="final_project/">here.</a>
+             </td>
+          </tr>
         </table>
       </div>
     </div>

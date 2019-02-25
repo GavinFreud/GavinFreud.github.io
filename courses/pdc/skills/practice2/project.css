@@ -1,0 +1,19 @@
+div {
+  text-align: center;
+  align-items: center;
+}
+
+body {
+  background-color: black;
+  background-image: radial-gradient(
+    rgba(52, 56, 52, 0.678), black 120%
+  );
+  height: 100vh;
+  color: white;
+  /*font: 1.3rem Inconsolata, monospace;*/
+  font: 1.3rem baskerville;
+}
+
+p {
+  display: inline
+}
