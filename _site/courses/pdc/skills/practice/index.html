@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <head>
     <title>Stuff</title>
+    <link type="text/css" rel="stylesheet" href="../../css/nav.css">
 </head>
 <body>
-        <ul class="nav navbar-nav">
-                <li><a href="../../"><i class="fa fa-home"></i>PDC Home</a></li>
-                <li><a href="../../hello_world/">Homework</a></li>
-                <li><a href="../../dataset/">Dataset Project</a></li>
-                <li><a href="../">Skills</a></li>
-                <li><a href="../practice2/">Practice 2</a></li>
-                <li><a href="../final_project">Skills Final Project</a></li>
+        <ul class="nav navbar-nav menu">
+                <li class="menuli"><a href="../../"><i class="fa fa-home"></i>PDC Home</a></li>
+                <li class="menuli"><a href="../../hello_world/">Homework</a></li>
+                <li class="menuli"><a href="../../dataset/">Dataset Project</a></li>
+                <li class="menuli"><a href="../">Skills</a></li>
+                <li class="menuli"><a href="../practice2/">Practice 2</a></li>
+                <li class="menuli"><a href="../final_project">Skills Final Project</a></li>
+                <li class="menuli"><a href="https://ramiyer1998.github.io/Pittsburgh-Yelp-Data">Group Project</a></li>
               </ul>
     <div id="first_div">
         <button onclick = "playSound()">Begin</button>
@@ -56,8 +58,9 @@
         div.appendChild(brk);
 
         var button1 = new Image(100,200);
-        button1.src = "img/ginkgo.jpg";
+        button1.src = "../img/ginkgo.jpg";
         button1.setAttribute("id", "Ginkgo");
+        button1.setAttribute("alt", "Ginkgo Tree");
         button1.onclick=function(){
             button1.onclick= function(){return; };
             button2.onclick = function(){return;};
@@ -67,8 +70,9 @@
         div.appendChild(button1);
         
         var button2 = new Image(100,200);
-        button2.src = "img/sakura.jpg";
+        button2.src = "../img/sakura.jpg";
         button2.setAttribute("id", "Sakura");
+        button2.setAttribute("alt", "Sakura Tree");
         button2.onclick=function(){
             button1.onclick= function(){return; };
             button2.onclick= function(){return; };
@@ -78,8 +82,9 @@
         div.appendChild(button2);
 
         var button3 = new Image(100,200);
-        button3.src = "img/maple.jpg";
+        button3.src = "../img/maple.jpg";
         button3.setAttribute("id", "Maple");
+        button3.setAttribute("alt", "Maple Tree");
 
         button3.onclick=function(){
             button1.onclick= function(){return; };
