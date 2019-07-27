@@ -1,2 +1,5 @@
-#ignore node_modules folder
+# ignore node_modules folder
 node_modules/
+
+# ignore DS_Store files
+.DS_Store
