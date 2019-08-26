@@ -1,5 +1,7 @@
 body, .container {
     background: #F5F5F5;
+	position: relative;
+	min-height: 100%;
 }
 
 .jumbotron{
